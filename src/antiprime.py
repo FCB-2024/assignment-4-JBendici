@@ -25,7 +25,7 @@ def ap(n):
 	while i < n:
 		if cd(i) >= dn:
 			return("Not anti-prime")
-   		i = i + 1
+		i = i + 1
 	return("Anti-prime")
 
 numero = int(sys,argv[1])
