@@ -6,19 +6,19 @@ import sys
 def main(n):
     d = 0
     i = 1
-    while i <= n:
+    while int(i) <= int(n):
         if n % i == 0:
-            d += 1
-        i += 1
+            d = d + 1
+        i = i + 1
     return d
 
 def ap(n):
     num_divisores = main(n)
     i = 1
-    while i < n:
+    while int(i) < int(n):
         if main(i) >= num_divisores:
             return "Not anti-prime"  # Retornamos "not anti-prime" si encontramos un número menor con igual o más divisores
-        i += 1
+        i = i + 1
     return "Anti-prime"  
 
 numero = sys.argv[1]
