@@ -24,11 +24,11 @@ def ap(n):
 	i = 1
 	while i < n:
 		if cd(i) >= dn:
-			return("Not anti-prime
+			return("Not anti-prime)
    		i = i + 1
 	return("Anti-prime")
 
- numero = int(sys,argv[1])
+numero = int(sys,argv[1])
 
 ap(numero)
 
