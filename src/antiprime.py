@@ -17,9 +17,9 @@ def ap(n):
     i = 1
     while i < n:
         if main(i) >= num_divisores:
-            return "Not anti-prime"
+            return "not anti-prime"
         i += 1
-    return "Anti-prime"  
+    return "anti-prime"  
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
