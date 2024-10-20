@@ -8,22 +8,22 @@ def main(n):
     i = 1
     while i <= n:
         if n % i == 0:
-            divisores += 1
+            d += 1
         i += 1
-    return divisores
+    return d
 
-def es_antiprime(n):
+def ap(n):
     num_divisores = main(n)
     i = 1
     while i < n:
         if main(i) >= num_divisores:
-            return "not anti-prime"  # Retornamos "not anti-prime" si encontramos un número menor con igual o más divisores
+            return "Not anti-prime"  # Retornamos "not anti-prime" si encontramos un número menor con igual o más divisores
         i += 1
-    return "antiprime"  
+    return "Anti-prime"  
 
 numero = int(sys.argv[1])
 
-resultado = es_antiprime(numero)
+resultado = ap(numero)
 print(resultado)
 
 
