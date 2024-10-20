@@ -21,7 +21,7 @@ def ap(n):
         i += 1
     return "Anti-prime"  
 
-numero = int(sys.argv[1])
+numero = sys.argv[1]
 
 resultado = ap(numero)
 print(resultado)
