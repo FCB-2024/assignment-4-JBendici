@@ -6,33 +6,25 @@ import sys
 def main(n):
     d = 0
     i = 1
-    while int(i) <= int(n):
+    while i <= n:
         if n % i == 0:
-            d = d + 1
-        i = i + 1
+            d += 1
+        i += 1
     return d
 
 def ap(n):
     num_divisores = main(n)
     i = 1
-    while int(i) < int(n):
+    while i < n:
         if main(i) >= num_divisores:
-            return "Not anti-prime"  # Retornamos "not anti-prime" si encontramos un número menor con igual o más divisores
-        i = i + 1
+            return "Not anti-prime"
+        i += 1
     return "Anti-prime"  
 
-numero = sys.argv[1]
-
-resultado = ap(numero)
-print(resultado)
-
-
-## DO NOT REMOVE THIS LINE BELOW
-if __name__ == "__main__" :
-
-	## MODIFY THE LINE BELOW AND ADD BEFORE WHATEVER LINES ARE NECESSARY
-	## TO RUN THIS PROGRAM AS, FOR INSTANCE:
-	## $ python antiprime.py 6
-	## WHERE THE FIRST ARGUMENT IS A POSITIVE INTEGER NUMBER FOR WHICH
-	## YOU WANT TO FIGURE OUT WHETHER IS ANTI-PRIME OR NOT
-	print(main())
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Uso: python antiprime.py <entero-positivo>")
+    else:
+        num = int(sys.argv[1])
+        res = ap(num)
+        print(res)
